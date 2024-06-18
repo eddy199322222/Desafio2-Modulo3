@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 2</title>
+</head>
+<body>
+    <div>
+        <img src="./assets/img/2.jpg" alt="Sticker 1">
+        <input type="number" id="sticker1" value="0" min="0" max="10">
+    </div>
+    <div>
+        <img src="./assets/img/3.jpg" alt="Sticker 2">
+        <input type="number" id="sticker2" value="0" min="0" max="10">
+    </div>
+    <div>
+        <img src="./assets/img/4.jpg" alt="Sticker 3">
+        <input type="number" id="sticker3" value="0" min="0" max="10">
+    </div>
+    <button id="count-stickers">Contar Stickers</button>
+    <p id="sticker-count"></p>
+
+    <script>
+        document.getElementById('count-stickers').addEventListener('click', function() {
+            const sticker1 = parseInt(document.getElementById('sticker1').value) || 0;
+            const sticker2 = parseInt(document.getElementById('sticker2').value) || 0;
+            const sticker3 = parseInt(document.getElementById('sticker3').value) || 0;
+            const total = sticker1 + sticker2 + sticker3;
+
+            const stickerCount = document.getElementById('sticker-count');
+            if (total <= 10) {
+                stickerCount.textContent = `Llevas ${total} stickers`;
+            } else {
+                stickerCount.textContent = 'Llevas demasiados stickers';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío 1</title>
+    <style>
+        .border-red {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <img src="./assets/img/1.jpg" alt="Imagen" id="toggle-border-image">
+    <script>
+        document.getElementById('toggle-border-image').addEventListener('click', function() {
+            this.classList.toggle('border-red');
+        });
+    </script>
+</body>
+</html>
